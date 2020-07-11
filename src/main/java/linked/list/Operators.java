@@ -1,5 +1,8 @@
 package linked.list;
 
+import java.security.PublicKey;
+import java.util.Stack;
+
 public class Operators {
     //head has data, and node is single node
     public static Node insertBeforeHead(Node head, Node node) {
@@ -234,6 +237,26 @@ public class Operators {
        return slow;
 
    }
+   public static void printListFromTail(Node head){
+        if(head!=null) {
+            printListFromTail(head.next);
+            System.out.print("=>"+head.data);
+        }
+   }
+    public static void printListFromTailWithStack(Node head){
+        if(head ==null) {
+            return;
+        }
+        Stack<Node> stack = new Stack<Node>();
+        while(head!=null){
+            stack.push(head);
+            head = head.next;
+        }
+        while (!stack.empty()){
+            System.out.print(stack.pop().data+"=>");
+        }
+    }
+
 
 
 

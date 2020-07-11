@@ -1,5 +1,7 @@
 package linked.list;
 
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
         Node node1 = new Node(1);
@@ -14,9 +16,12 @@ public class Main {
         head = Operators.insertBeforeHead(head, node3);
         head = Operators.insertBeforeHead(head, node4);
         head = Operators.insertBeforeHead(head, node5);
-        //head = Operators.insertBeforeHead(head, node6);
+        head = Operators.insertBeforeHead(head, node6);
         //head = Operators.deleteNNode(head,5);
         Operators.printList(head);
+        Operators.printListFromTail(head);
+        Operators.printListFromTailWithStack(head);
+        System.exit(0);
         Operators.printList(Operators.findMiddleNode(head));
         System.exit(0);
         Operators.printList(head);
